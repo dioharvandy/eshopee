@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Barang extends Model
+class Transaksi extends Model
 {
     use HasFactory;
 
-    protected $table = "barang";
+    protected $table = "transaksi";
 
-    public function kategori(){
-        return $this->belongsTo('App\Models\Kategori');
-    }
-    public function transaksi_details(){
+    public function transaksidetails(){
         return $this->hasMany('App\Models\Transaksi_detail');
     }
 }

@@ -15,10 +15,10 @@ class BarangSeeder extends Seeder
      */
     public function run()
     {
-        $kategoris = Kategori::factory(10)->create();
+        $kategoris = Kategori::factory(5)->create();
 
         foreach ($kategoris as $kategori){
-            Barang::factory(10)->create(['kategori_id' => $kategori->id]);
+            Barang::factory(5)->create(['kategori_id' => $kategori->id]);
         }
     }
 }
